@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const Employee = require("./lib/Employee");
 
 const managerQuestions = [
     {
@@ -23,3 +24,10 @@ const managerQuestions = [
     },
 ];
 
+function promptManager() {
+    inquirer.prompt(managerQuestions).then(answers => {
+        console.log(answers)
+    })
+}
+
+promptManager();
