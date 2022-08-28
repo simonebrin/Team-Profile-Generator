@@ -13,10 +13,20 @@ return`
 <body>
     <h1>Your Team</h1>
     ${team.map(teamMember => {
-        return`<h3>${teamMember.getRole()}</h3>
-        <h4>${teamMember.name}</h4>
+        let specialAttribute
+        if(teamMember.getRole() === "Manager") specialAttribute = teamMember.getOffice()
+        if(teamMember.getRole() === "Engineer") specialAttribute = teamMember.getGithub()
+        if(teamMember.getRole() === "Intern") specialAttribute = teamMember.getGithub()
+        return`
+        <div class="member-card"
+        <h3>${teamMember.getRole()}</h3>
+        ${teamMember.getName()}
+        ${teamMember.getEmail()}
+        ${teamMember.getId()}
+        ${specialAttribute}
+        </div>
         `
-    })}
+    }) .join("")}
     
 </body>
 </html>`
