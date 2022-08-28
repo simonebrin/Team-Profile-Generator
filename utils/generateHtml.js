@@ -16,7 +16,7 @@ return`
         let specialAttribute
         if(teamMember.getRole() === "Manager") specialAttribute = teamMember.getOffice()
         if(teamMember.getRole() === "Engineer") specialAttribute = teamMember.getGithub()
-        if(teamMember.getRole() === "Intern") specialAttribute = teamMember.getGithub()
+        if(teamMember.getRole() === "Intern") specialAttribute = teamMember.getSchool()
         return`
         <div class="member-card"
         <h3>${teamMember.getRole()}</h3>

@@ -17,7 +17,7 @@ test("get employees id", () => {
 
 test("get employees getId", () => {
     const employee = new Employee("Simone", "2", "simonebrin@gmail.com")
-    expect(employee.getId()).toBe("2")
+    expect(employee.getId()).toBe("<p>ID: 2</p>")
 } )
 
 test("get employees email", () => {
@@ -27,5 +27,5 @@ test("get employees email", () => {
 
 test("get employees getEmail", () => {
     const employee = new Employee("Simone", "2", "simonebrin@gmail.com")
-    expect(employee.getEmail()).toBe('<a href="mailto:simonebrin@gmail.com">simonebrin@gmail.com</a>')
+    expect(employee.getEmail()).toBe('<p>Email: <a href=\"mailto:simonebrin@gmail.com\">simonebrin@gmail.com</a></p>')
 } )
