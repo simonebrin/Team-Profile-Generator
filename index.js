@@ -1,6 +1,9 @@
 const inquirer = require("inquirer");
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Manager");
+const Intern = require("./lib/Intern")
+const team = []
 
 const managerQuestions = [
   {
@@ -28,6 +31,8 @@ const managerQuestions = [
 function promptManager() {
   inquirer.prompt(managerQuestions).then((answers) => {
     console.log(answers);
+    const manager = new Manager(answers.managerName, answers.employeeId, answers.email, answers.officeNumber)
+    team.push(manager)
     promptMenu();
   });
 }
@@ -101,24 +106,30 @@ function promptMenu() {
       //     console.log(answers)
     }
     if (answers.otherEmployees === "None") {
-        console.log("I need to generate a HTML");
+        buildHtml()
     }
   });
 }
 
 function promptEngineer() {
   inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
+    const engineer = new Engineer(engineerAnswers.engineerName, engineerAnswers.engineerId, engineerAnswers.email, engineerAnswers.gitUn)
+    team.push(engineer)
     promptMenu();
   });
 }
 
 function promptIntern() {
   inquirer.prompt(internQuestions).then((internAnswers) => {
+    const intern = new Intern(internAnswers.internName, internAnswers.internId, internAnswers.email, internAnswers.school)
+    team.push(intern)
     promptMenu();
   });
 }
 
-function buildHtml() {}
+function buildHtml() {
+    console.log(team)
+}
 
 promptManager();
 // promptMenu();
