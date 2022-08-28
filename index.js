@@ -3,6 +3,8 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern")
+const generateHtml = require("./utils/generateHtml")
+const fs = require("fs")
 const team = []
 
 const managerQuestions = [
@@ -106,7 +108,7 @@ function promptMenu() {
       //     console.log(answers)
     }
     if (answers.otherEmployees === "None") {
-        buildHtml()
+        buildHtml(team)
     }
   });
 }
@@ -128,7 +130,13 @@ function promptIntern() {
 }
 
 function buildHtml() {
-    console.log(team)
+        fs.writeFile("./dist/index.html", generateHtml(team), function(err){
+            if(err){
+                console.log(err)
+            } else {
+                console.log("You have successfuolly created your html.")
+            }
+        })
 }
 
 promptManager();
