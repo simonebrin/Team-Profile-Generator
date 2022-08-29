@@ -57,17 +57,17 @@ const engineerQuestions = [
   {
     type: "input",
     name: "engineerId",
-    message: "What is your employee ID?",
+    message: "What is their employee ID?",
   },
   {
     type: "input",
     name: "email",
-    message: "What is your email address?",
+    message: "What is their email address?",
   },
   {
     type: "input",
     name: "gitUn",
-    message: "What is your GitHub username?",
+    message: "What is their GitHub username?",
   },
 ];
 
@@ -80,17 +80,17 @@ const internQuestions = [
   {
     type: "input",
     name: "internId",
-    message: "What is your employee ID?",
+    message: "What is their employee ID?",
   },
   {
     type: "input",
     name: "email",
-    message: "What is your email address?",
+    message: "What is their email address?",
   },
   {
     type: "input",
     name: "school",
-    message: "What school do you go to?",
+    message: "What school did they go to?",
   },
 ];
 
