@@ -7,7 +7,7 @@ test("get engineers name", () => {
 
 test("get engineers getName", () => {
     const engineer = new Engineer("Simone", "2", "simonebrin@gmail.com", "simonebrin")
-    expect(engineer.getName()).toBe("<h4>Simone</h4>")
+    expect(engineer.getName()).toBe("Simone")
 } )
 
 test("get engineers id", () => {
@@ -17,7 +17,7 @@ test("get engineers id", () => {
 
 test("get engineers getId", () => {
     const engineer = new Engineer("Simone", "2", "simonebrin@gmail.com", "simonebrin")
-    expect(engineer.getId()).toBe("<p>ID: 2</p>")
+    expect(engineer.getId()).toBe("ID: 2")
 } )
 
 test("get engineers email", () => {
@@ -27,7 +27,7 @@ test("get engineers email", () => {
 
 test("get engineers getEmail", () => {
     const engineer = new Engineer("Simone", "2", "simonebrin@gmail.com", "simonebrin")
-    expect(engineer.getEmail()).toBe('<p>Email: <a href=\"mailto:simonebrin@gmail.com\">simonebrin@gmail.com</a></p>')
+    expect(engineer.getEmail()).toBe('Email: <a href=\"mailto:simonebrin@gmail.com\">simonebrin@gmail.com</a>')
 } )
 
 test("get engineers gitUn", () => {
@@ -37,5 +37,5 @@ test("get engineers gitUn", () => {
 
 test("get engineers getGithub", () => {
     const engineer = new Engineer("Simone", "2", "simonebrin@gmail.com", "simonebrin")
-    expect(engineer.getGithub()).toBe('<p>GitHub:<a href="simonebrin@github.com">simonebrin@github.com</a></p>')
+    expect(engineer.getGithub()).toBe('GitHub: <a href=\"https://github.com/simonebrin\" target=\"_blank\">github.com/simonebrin</a>')
 } )

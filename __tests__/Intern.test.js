@@ -7,7 +7,7 @@ test("get interns name", () => {
 
 test("get interns getName", () => {
     const intern = new Intern("Simone", "2", "simonebrin@gmail.com", "NYU")
-    expect(intern.getName()).toBe("<h4>Simone</h4>")
+    expect(intern.getName()).toBe("Simone")
 } )
 
 test("get interns id", () => {
@@ -17,7 +17,7 @@ test("get interns id", () => {
 
 test("get interns getId", () => {
     const intern = new Intern("Simone", "2", "simonebrin@gmail.com", "NYU")
-    expect(intern.getId()).toBe("<p>ID: 2</p>")
+    expect(intern.getId()).toBe("ID: 2")
 } )
 
 test("get interns email", () => {
@@ -27,7 +27,7 @@ test("get interns email", () => {
 
 test("get interns getEmail", () => {
     const intern = new Intern("Simone", "2", "simonebrin@gmail.com", "NYU")
-    expect(intern.getEmail()).toBe('<p>Email: <a href=\"mailto:simonebrin@gmail.com\">simonebrin@gmail.com</a></p>')
+    expect(intern.getEmail()).toBe('Email: <a href=\"mailto:simonebrin@gmail.com\">simonebrin@gmail.com</a>')
 } )
 
 test("get interns school", () => {
@@ -37,5 +37,5 @@ test("get interns school", () => {
 
 test("get interns getSchool", () => {
     const intern = new Intern("Simone", "2", "simonebrin@gmail.com", "NYU")
-    expect(intern.getSchool()).toBe("<p>School:NYU</p>")
+    expect(intern.getSchool()).toBe("School: NYU")
 } )
