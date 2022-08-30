@@ -3,7 +3,7 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern")
-const generateHtml = require("./utils/generateHtml")
+const generateHtml = require("./src/generateHtml")
 const fs = require("fs")
 const team = []
 

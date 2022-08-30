@@ -11,7 +11,7 @@ return`
     <title>Team Profile Generator</title>
 </head>
 <body>
-    <div class="container-fluid text-bg-danger p-3 text-center mb-2">
+    <div class="container-fluid text-bg-primary p-3 text-center mb-2">
         <h1>My Team</h1>
     </div>
     <div class="d-flex justify-content-around p-3">
@@ -22,7 +22,7 @@ return`
         if(teamMember.getRole() === "Intern") specialAttribute = teamMember.getSchool()
         return`
           <div class="card h-100 m-3 w-100">
-        <div class="card-body text-bg-primary text-center">
+        <div class="card-body text-bg-info text-center">
           <h4 class="card-title">${teamMember.getName()}</h4>
           <h5 class="card-text">${teamMember.getRole()}</h5>
         </div>
